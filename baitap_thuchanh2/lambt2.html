@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <from>
+        <h1>tính</h1>
+        <input type="text" id="so1" value="">
+        <input type="text" id="so2" value=""> <br>
+
+        <input type="button" value="cộng(+)" onclick="tinhtoan(1)">
+        <input type="button" value="trừ(-)" onclick="tinhtoan(2)">
+        <input type="button" value="nhân(x)" onclick="tinhtoan(3)">
+        <input type="button" value="chia(/)" onclick="tinhtoan(4)">
+        <p id="ketqua"></p>
+    </from>
+    <script>
+        let ketqua;
+        let id1 = "";
+
+        function tinhtoan(id) {
+            let o1 = parseInt(document.getElementById('so1').value);
+            let o2 = parseInt(document.getElementById('so2').value);
+
+            // if( id == 1){
+            //     ketqua = o1 + o2;
+            //     document.getElementById('ketqua').innerHTML = 'kết quả:' + ketqua;
+            // } 
+
+            // if( id == 2){
+            //     ketqua1 = o1 - o2;
+            //     document.getElementById('ketqua').innerHTML = 'kết quả:' + ketqua1;
+            // } 
+
+            // if( id == 3){
+            //     ketqua2 = o1 * o2;
+            //     document.getElementById('ketqua').innerHTML = 'kết quả:' + ketqua2;
+            // } 
+
+            // if( id == 4){
+            //     ketqua3 = o1 / o2;
+            //     document.getElementById('ketqua').innerHTML = 'kết quả:' + ketqua3;
+            // }  
+
+            switch (id) {
+                case 1:
+                    {
+                        ketqua = o1 + o2;
+
+                    }
+            }
+
+            switch (id) {
+                case 2:
+                    {
+                        ketqua = o1 - o2;
+
+                    }
+            }
+
+            switch (id) {
+                case 3:
+                    {
+                        ketqua = o1 * o2;
+
+                    }
+            }
+
+            switch (id) {
+                case 4:
+                    {
+                        ketqua = o1 / o2;
+
+                    }
+            }
+            document.getElementById('ketqua').innerHTML = ('kết quả:' + ketqua);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <tr>
+        <td>Caculator</td>
+        <br>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="mot" value="" >
+        </td>
+        <td>
+            <input type="text" id="hai" value="" >
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <button type="button" onclick="cong1();" id="cong" value="congg"> cộng(+)</button>
+            
+        </td>
+        <td>
+            <button type="button" onclick="cong3();" id="tru" value="truu"> trừ(-)</button>
+
+        </td>
+        <td>
+            <button type="button" onclick="nhannnn();" id="nhan" value="nhann"> nhân(x)</button>
+
+        </td>
+        <td>
+            <button type="button" onclick="cong4();" id="chia " value="chiaa"> chia(/)</button>
+
+        </td>
+    </tr>
+    <p id="ketqua"></p>
+    <script>
+         function cong1(){
+            let som1;
+             som1 = parseInt(document.getElementById('mot').value) ;
+             let soh1
+            soh1 = parseInt(document.getElementById('hai').value) ;
+            let ketqua1 = som1 + soh1 ;
+            document.getElementById('ketqua').innerHTML = 'kết quả: ' + ketqua1 ;
+         }
+         function cong3(){
+            let som1 = parseInt(document.getElementById('mot').value) ;
+            let soh1 = parseInt(document.getElementById('hai').value) ;
+            let ketqua2 = som1 - soh1 ;
+            document.getElementById('ketqua').innerHTML = 'kết quả: ' + ketqua2 ;
+            }
+
+         function nhannnn(){
+            let som1 = parseInt(document.getElementById('mot').value) ;
+            let soh1 = parseInt(document.getElementById('hai').value) ;
+            let ketqua3 = som1 * soh1 ;
+            document.getElementById('ketqua').innerHTML = 'kết quả: ' + ketqua3 ;
+            }
+
+        function cong4(){
+            let som1 = parseInt(document.getElementById('mot').value) ;
+            let soh1 = parseInt(document.getElementById('hai').value) ;
+            let ketqua4 = som1 / soh1 ;
+            document.getElementById('ketqua').innerHTML = 'kết quả: ' + ketqua4 ;
+        }
+             
+    </script>
+</body>
+</html>
