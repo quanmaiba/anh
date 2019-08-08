@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 1000px;
+        }
+    </style>
+
+</head>
+
+<body onload="nhay()">
+    <!-- <div src="xe.jpg"></div> -->
+    <img id="anh" src="xe.jpg" style="position:relative ; left:0px ; top:0px" width="200px" height="200px">
+    <p>KICK</p>
+    <input type="button" onmouseleave="kickme3()" value="right" onclick="kickme3()">
+    <input type="button" onmouseleave="kickme1()" value="left" onclick="kickme1()">
+    <input type="button" onmouseleave="kickme2()" value="up" onclick="kickme2()">
+    <input type="button" onmouseleave="kickme4()" value="down" onclick="kickme4()">
+    <script>
+        function kickme1() {
+            let anh1 = document.getElementById("anh");
+            if (parseInt(anh1.style.left) >= 0)
+                anh1.style.left = parseInt(anh1.style.left) - 10 + 'px';
+        }
+
+        function kickme2() {
+            let anh1 = document.getElementById("anh");
+            if (parseInt(anh1.style.top) >= 0)
+                anh1.style.top = parseInt(anh1.style.top) - 10 + 'px';
+        }
+
+        function kickme3() {
+            let anh1 = document.getElementById("anh");
+            if ((parseInt(anh1.style.left) + 210) < window.innerWidth)
+                anh1.style.left = parseInt(anh1.style.left) + 10 + 'px';
+        }
+
+        function kickme4() {
+            let anh1 = document.getElementById("anh");
+            if ((parseInt(anh1.style.top) + 210) < window.innerHeight)
+                anh1.style.top = parseInt(anh1.style.top) + 10 + 'px';
+        }
+
+        function chay(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    kickme1();
+                    break;
+                case 38:
+                    kickme2();
+                    break;
+                case 39:
+                    kickme3();
+                    break;
+                case 40:
+                    kickme4();
+                    break;
+            }
+        }
+
+        function nhay() {
+            window.addEventListener('keydown', chay)
+        }
+
+
+
+        // switch (id) {
+        //     case 1:
+        //         anh1.style.left = parseInt(anh1.style.left) + 10 + 'px';
+        //         break;
+        //     case 2:
+        //         anh1.style.left = parseInt(anh1.style.left) - 10 + 'px';
+        //         break;
+        //     case 3:
+        //         anh1.style.top = parseInt(anh1.style.top) - 10 + 'px';
+        //         break;
+        //     case 4:
+        //         anh1.style.top = parseInt(anh1.style.top) + 10 + 'px';
+        //         break;
+        // }
+        // function chay(evt){
+        //     switch(evt.keyCode){
+        //         case 37 :
+        //         (id==2) 
+
+
+
+        // if (id == 1) {
+        //     anh1.style.left = parseInt(anh1.style.left) + 10 + 'px';
+        // }
+        // if (id == 2) {
+        //     anh1.style.left = parseInt(anh1.style.left) - 10 + 'px';
+        // }
+        // if (id == 3) {
+        //     anh1.style.top = parseInt(anh1.style.top) - 10 + 'px';
+        // }
+        // if (id == 4) {
+        //     anh1.style.top = parseInt(anh1.style.top) + 10 + 'px';
+        // }
+    </script>
+
+</body>
+
+</html

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<thead>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td,
+        tr {
+            padding-left: 20px;
+        }
+    </style>
+
+</thead>
+
+<tbody>
+
+    <table>
+        <tr>
+            <td>BMI</td>
+            <td>interpretation</td>
+        </tr>
+        <tr>
+
+            <td>BMI ≤ 18.5</td>
+            <td> Underweight</td>
+        </tr>
+        <tr>
+            <td>18.5 ≤ BMI ≤ 25.0</td>
+            <td>Normal</td>
+        </tr>
+        <tr>
+            <td>25.0 ≤ BMI ≤30.0</td>
+            <td>Overweight</td>
+        </tr>
+        <tr>
+            <td>30.0 ≤ BMI</td>
+            <td>Obese</td>
+        </tr>
+    </table>
+    <p></p>
+
+    <script>
+        let weight = parseFloat(prompt('nhập cân năng:'));
+        let height = parseFloat(prompt('nhâp chieu cao '));
+        bmi = weight / (height * height);
+        // alert(bmi);
+
+        // if (bmi < 18) {
+        //     document.write("Underweight");
+        // } else if (bmi <= 25.0) {
+        //     document.write("Normal");
+        // } else if (bmi <= 30.0) {
+        //     document.write("Overweight");
+        // } else {
+        //     document.write("Obese");
+        // }
+
+        let bmi1 = ((bmi < 18.5) ? alert('Underweight') : (bmi <= 20.0) ?
+            alert('Normal') : (bmi <= 30.0) ? alert('Overweight') :
+            alert('Obese'));
+    </script>
+
+</tbody>
+
+</html>

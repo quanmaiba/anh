@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt('nhâp điểm bài kiểm tra '));
+        let b = parseFloat(prompt('nhâp sô điểm thi giữa kỳ'));
+        let c = parseFloat(prompt('nhâp sô điểm thi cuối kỳ'));
+        let ketqua = true;
+        ketqua = (a + (b * 2) + (c * 3)) / 6
+
+        if (ketqua > 8) {
+            alert('hs gioi');
+        } else if (ketqua > 6) {
+            alert('hs kha');
+        } else if (ketqua >= 5) {
+            alert("hs tb");
+        } else if (ketqua < 5) {
+            alert('hs yeu');
+            // } else {
+            //     alert('hs kém');
+        }
+        // alert(ketqua)
+        // (ketqua > 8) ? alert("hs gioi") : (ketqua > 6.5) ? alert('hs khá') : (ketqua > 5) ?
+        // alert('hs tb') : (ketqua < 5) ? alert('hs yeu') : alert('hs kem');
+    </script>
+</body>
+
+</html>

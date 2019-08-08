@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tienBanDau = 12000000;
+        var thang = 3;
+        var lai = 2 / 100;
+        var thanhTien = 0;
+        console.log(thanhTien);
+        for (var i = 0; i < 3; i++) {
+            thanhTien = tienBanDau * lai;
+            tienBanDau = thanhTien + tienBanDau;
+            document.write(`tháng ${i+1} lãi :  ${thanhTien} <br>`);
+
+        }
+        document.write(`sau ${i} tháng tiền hiện có : ${tienBanDau}`);
+    </script>
+</body>
+
+</html>

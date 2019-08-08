@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 0;
+        let b = 1;
+        let kq;
+        let n = parseInt(prompt("bạn muốn hiển thị bao nhiêu số"))
+        document.write("1" + "<br>");
+        for (let i = 1; i < n; i++) {
+            kq = a + b;
+            a = b;
+            b = kq;
+            document.write(kq + "<br>");
+        }
+    </script>
+</body>
+
+</html>

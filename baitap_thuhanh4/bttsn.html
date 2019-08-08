@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="so12" value="">
+    <button type="button" onclick="tinhso()">tính số ngày</button>
+    <p id="so1"></p>
+    <script>
+        function tinhso() {
+
+            let so = document.getElementById('so12').value;
+            let no = document.getElementById('so1');
+            let no1 = 'Tháng không có trong năm'; {
+                //document.getElementById('so1').innerHTML = 'tháng ' + so + ' co 31 ngày';
+                if (so == 2) {
+                    no1 = 'Tháng ' + so + ' có 28 hoăc 29 ngày';
+                }
+                if (so == 1 || so == 3 || so == 5 || so == 7 || so == 8 || so == 10 || so == 12) {
+                    no1 = 'Tháng ' + so + ' có 31 ngày';
+                }
+                if (so == 4 || so == 6 || so == 9 || so == 11) {
+                    no1 = 'Tháng ' + so + ' có 30 ngày';
+                }
+                no.innerHTML = no1;
+            }
+        }
+    </script>
+</body>
+
+</html>
