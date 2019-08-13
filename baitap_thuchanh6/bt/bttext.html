@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Type anthing slowly</h2>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+    </form>
+
+    <script>
+        var a = new Array(),
+            a = "TÔI LÀ MỘT ĐỨA NGỐC!"
+        n = "";
+
+        function typeTextarea() {
+            let t = document.f.txt.value;
+            for (var i = 0; i < t.length; i++) {
+                n = n + a[i];
+                if (i == a.length) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+            document.f.txt.value = n;
+            n = "";
+            setTimeout("typeTextarea()", 1);
+        }
+        // return false;
+        // let a = new Array();
+        // a = "TÔI LÀ MỘT ĐỨA NGỐC!!!";
+        // n = "";
+
+        // function typeTextarea();
+        // let b = document.f.txt.value;
+        // for (let i = 0; i < b.length; i++) {
+        //     n += a[i];
+        //     if (i == a.length) {
+        //         document.f.txt.value = "";
+        //         n = "";
+        //     }
+        // }
+        // document.f.txt.value = n;
+        // n = "";
+    </script>
+    </head>
+
+</html>

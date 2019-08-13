@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrayInt = [];
+        let sumColumn = 0;
+        let maxSumCol = 0;
+        let column;
+        let sumDiagonal = 0;
+        for (let i = 0; i < 5; i++) {
+            arrayInt[i] = [];
+            for (let j = 0; j < 5; j++) {
+                arrayInt[i][j] = Math.round(Math.random() * 10);
+            }
+            // arrayInt[i]=parseInt(prompt('nhập arrayInt['+i+']'));
+        }
+        for (let t of arrayInt) {
+            document.write(t + '<br>');
+
+        }
+        for (let j = 0; j < 5; j++) {
+            for (let i = 0; i < 5; i++) {
+                sumColumn += arrayInt[i][j];
+            }
+            if (sumColumn > maxSumCol) {
+                maxSumCol = sumColumn;
+                column = j;
+            }
+            sumColumn = 0;
+        }
+        document.writeln('tổng cột lớn nhất' + maxSumCol);
+        for (let i = 0; i < 5; i++) {
+            document.writeln('<br>' + arrayInt[i][column])
+        }
+        // for (let i = 0; i < 5; i++) {
+        //     sumDiagonal += arrayInt[i][i];
+        //     document.write('<h2>' + arrayInt[i][i] + '<h2>');
+        // }
+        // document.writeln('<br> tổng đường chéo chính' + sumDiagonal);
+        // let itemFind = +prompt('nhập zô');
+        // for (let i = 0; i < 5; i++) {
+        //     id = arrayInt[i].indexOf(itemFind)
+        //     if (id !== -1) {
+        //         document.write('vị trí ' + 'hàng' + (i + 1) + 'cột' + (id + 1));
+        //         break;
+        //     }
+        // }
+
+
+
+        // let max = 0;
+        // let sum = 0;
+        // let mang = []
+        // for (let i = 0; i < 5; i++) {
+        //     mang[i] = []
+        //     for (let j = 0; j < 5; j++) {
+        //         mang[i][j] = Math.round(Math.random() * 10)
+        //     }
+        // }
+        // for (let c of mang) {
+        //     document.write(c + "<br>");
+        // }
+        // for (let j = 0; j < 5; j++) {
+        //     for (let i = 0; i < 5; i++) {
+        //         sum += mang[i][j];
+        //     }
+        //     if (sum > max) {
+        //         max = sum;
+        //     }
+        //     sum = 0;
+        // }
+        // document.write("tong" + max);
+    </script>
+</body>
+
+</html>

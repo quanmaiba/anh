@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let aray = [];
+        let max = 0;
+        let index = null;
+        for (let i = 0; i < 10; i++) {
+            aray[i] = Math.round(Math.random() * 20);
+            console.log(aray[i]);
+            if (aray[i] > max) {
+                max = aray[i];
+                index = i;
+            }
+        }
+        document.write(max + " index " + index);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = prompt('nhập chuỗi');
+        let arr = []
+        for (let i = 0; i < obj.length; i++) {
+            arr.push(obj[i])
+        }
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] == '-') {
+                arr[j] = '_'
+            }
+        }
+        document.write(arr)
+    </script>
+</body>
+
+</html>
