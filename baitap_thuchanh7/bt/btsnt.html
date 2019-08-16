@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("nhap số")
+        while (!Number.isInteger(number)) {
+            alert("nhập lại");
+            number = +prompt("nhap số")
+        }
+        let number1 = isPrime(number);
+        let number2 = (number1 == false) ? alert("sai") : alert("đúng")
+
+        function isPrime(num) {
+
+            if (num < 2) {
+                return false;
+            } else {
+                for (let i = 2; i < Math.sqrt(num); i++) {
+                    if (num % i == 0) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        for (let i = 2; i < 10000; i++) {
+            if (isPrime(i)) {
+                document.write(i + "; ");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function isPrime(number) {
+        //     if (number < 2) {
+        //         return false;
+        //     }
+
+        //     for (let i = 2; i <= Math.sqrt(number); i++) {
+        //         if (number % i == 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        // document.write("Các số nguyên tố nhỏ hơn 10000:<br>")
+        // for (let i = 2; i < 10000; i++) {
+        //     if (isPrime(i)) {
+        //         document.write(i + "<br>");
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <h2>Add New Product</h2>
+    </p>
+    <div>
+        <input type="text" id="newProduct">
+        <button type="button" onclick="addProduct()"> Add</button>
+    </div>
+    <div>
+        <h2>Display All Product</h2>
+    </div>
+    <div>
+        <tr>
+            <td>Product</td>
+            <td><span id="result"></span></td>
+        </tr>
+    </div>
+    <table id="table">
+        <tr>
+            <td>Product</td>
+            <td>product</td>
+        </tr>
+    </table>
+    <script>
+        let product = ["Nokia", "Iphone"];
+        display(product);
+
+        function addProduct(x) {
+            x = document.getElementById("newProduct").value;
+            if (check(x) === false) {
+                product.push(x);
+                display(product);
+            } else alert("lỗi");
+        }
+
+        function check(x) {
+            for (let i = 0; i < product.length; i++) {
+                if (product[i] === x || x === "")
+                    return true;
+            }
+            return false;
+        }
+
+        function deleteProduct(x) {
+            product.splice(x, 1);
+            display(product);
+        }
+
+        function edit(x) {
+            let n = prompt("nhập");
+            for (let i = 0; i < product.length; i++) {
+                if (product[i] === n || n === "") {
+                    alert("lỗi");
+                    return;
+                } else product[x] = n;
+            }
+            display(product);
+        }
+
+        function display(x) {
+            let text = "";
+            for (let i = 0; i < product.length; i++) {
+                text += "<tr>";
+                text += "<td id='" + i + "'>" + product[i] + "</td>";
+                text += "<td>" + "<button onclick='edit(" + i + ")' >" + "edit" + "</button>" + "</td>";
+                text += "<td>" + "<button onclick='deleteProduct(" + i + ")'>" + "delete" + "</button>" + "</td>";
+                text += "</tr>";
+            }
+            document.getElementById("table").innerHTML = text;
+        }
+        document.getElementById("result").innerHTML = product.length + " product";
+    </script>
+
+</body>
+
+</html>

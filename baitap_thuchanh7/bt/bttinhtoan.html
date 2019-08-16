@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Feet</td>
+            <td>Meters</td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="feet2(this.value)" onchange="feet2(this.value)"></td>
+            <td><input type="number" oninput="meter(this.value)" onchange="meter(this.value)"></td>
+        </tr>
+    </table>
+    <p>Chuyển đổi từ f => m : <span id="meter"></span></p>
+    <p> Chuyển đổi từ m => f : <span id="feet"></span></p>
+
+    <script>
+        function feet2(value) {
+            let kq = feet(value);
+            document.getElementById("meter").innerHTML = kq;
+        }
+
+        function feet(value) {
+            value = parseFloat(value);
+            let feet1 = value * 0.305;
+            return feet1;
+            // document.getElementById("meter").innerHTML = feet1;
+        }
+
+        function meter(value) {
+            let kq = meter1(value);
+            document.getElementById("feet").innerHTML = kq;
+        }
+
+        function meter1(value) {
+            value = parseFloat(value);
+            let feet1 = value * 3.279;
+            return feet1;
+            // document.getElementById("feet").innerHTML = feet1;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let meter1 = (meter.value = feetToMeter(feet.value));
+
+        // let feet1 = (feet.value = meterToFeet(meter.value))
+
+
+        // function feetToMeter(feet) {
+        //     return feet * 0.305;
+        // }
+
+        // function meterToFeet(meter) {
+        //     return meter * 3.279;
+        // }
+
+        // function outputMeter() {
+        //     meter.value = feetToMeter(feet.value);
+        // }
+
+        // function outputFeet() {
+        //     feet.value = meterToFeet(meter.value);
+        // }
+
+        // function docReady() {
+        //     let feet = document.getElementById('feet');
+        //     feet.addEventListener("input", outputMeter);
+        //     let meter = document.getElementById("meter");
+        //     meter.addEventListener("input", outputFeet);
+        // }
+        // window.onload = docReady;
+    </script>
+</body>
+
+</html>

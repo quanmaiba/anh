@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        let input = prompt("Nhập ký tự cần tìm");
+        let arr1 = ["Polaris", "Aldebaran", " Deneb", "Vega", "Altair", "Dubhe", " Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", " Cygnus", "Lyra", "Aquila", " Ursa Major", "  Leo"];
+        // let int = input1(arr1, input, arr2);
+
+        function input1(arr1, input, arr2) {
+            let output = arr1.indexOf(input);
+            if (output !== -1) {
+                alert("Ngôi sao: " + arr1[output] + "=>" + "Chòm sao: " + arr2[output]);
+                return;
+            } else {
+                alert("không thấy")
+            }
+        }
+        input1(arr1, input, arr2);
+    </script>
+
+</body>
+
+</html>
