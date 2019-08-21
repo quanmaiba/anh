@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mobile</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- nokia
+    Yes, it is Nokia but seem like Iphone.
+    <strike>Lazy to write down css again</strike> -->
+    <div class="powerNK">
+        <button onclick="changeStatut('nokia')">test</button>
+    </div>
+    <div class="smartphone" style="float: left">
+        <div class="content">
+            <button class="content-btnNK" onclick="checkStatut('nokia')">
+          Status
+            </button>
+            <!-- send mess start from here -->
+            <button class="content-btnNK" onclick="sendMsg('nokia')">
+          Send Msg
+        </button>
+            <!--this is a form for msg pre-send -->
+            <div id="prepareSendMsgNK">
+                <h2>Send message</h2>
+                <div class="sendMsg">
+                    <h3>Send to: Iphone</h3>
+                    <textarea id="typingMsgonNK" onkeyup="getValueofTextarea('nokia')"></textarea>
+                    <button class="btnSend" onclick="sendMess('nokia')">Send</button>
+                    <button class="btnCancle" onclick="saveIntoDraft('nokia')">
+                    Cancle
+                    </button>
+                </div>
+            </div>
+            <!-- end form -->
+            <button class="content-btnNK" onclick="showReceiveMsg('nokia')">
+          Receive Msg
+        </button>
+            <button class="content-btnNK" onclick="checkSended('nokia')">
+          Sended Msg
+        </button>
+            <table id="tableNK"></table>
+        </div>
+        <div class="wrapper">
+            <button onclick="charging('nokia')" class="charge"></button>
+        </div>
+    </div>
+    <!-- lost nokia aka Iphone -->
+
+    <!-- Iphone -->
+    <div class="power">
+        <button onclick="changeStatut('iphone')">test</button>
+    </div>
+
+    <div class="smartphone">
+        <div class="content">
+            <button class="content-btnIP" onclick="checkStatut('iphone')">
+          Status
+        </button>
+            <!-- send mess start from here -->
+            <button class="content-btnIP" onclick="sendMsg('iphone')">
+          Send Msg
+        </button>
+            <!--this is a form for msg pre-send -->
+            <div id="prepareSendMsgIP">
+                <h2>Send message</h2>
+                <div class="sendMsg">
+                    <h3>Send to: Nokia</h3>
+                    <textarea id="typingMsgonIP" onkeyup="getValueofTextarea('iphone')"></textarea>
+                    <button class="btnSend" onclick="sendMess('iphone')">Send</button>
+                    <button class="btnCancle" onclick="saveIntoDraft('iphone')">
+              Cancle
+            </button>
+                </div>
+            </div>
+            <!-- end form -->
+            <button class="content-btnIP" onclick="showReceiveMsg('iphone')">
+          Receive Msg
+        </button>
+            <button class="content-btnIP" onclick="checkSended('iphone')">
+          Sended Msg
+        </button>
+            <table id="tableIP"></table>
+        </div>
+
+        <div class="wrapper">
+            <button onclick="charging('iphone')" class="charge"></button>
+        </div>
+    </div>
+    <!-- lost Iphone -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            <h1>đổi c => f</h1>
+        </p>
+        <input id="num" type="number" value="">
+        <input type="button" value="kick" onclick="fool1()">
+        <p>
+            <h2>Kết quả:<span id="fool2"></span></h2>
+        </p><br>
+        <h1>đổi c => k</h1>
+        <input type="number" value="">
+        <input type="button" value="kick1" onclick="kenvin1()">
+
+        <p>
+            <h2>Kết quả:<span id="kenvin2"></span></h2>
+        </p>
+
+    </div>
+    <script>
+        let Temperature = function(temperature) {
+            this.temperature = temperature;
+            this.getFool = function() {
+                return (temperature * 1.8) + 32;
+            };
+            this.getKenvin = function() {
+                return temperature + 273.15;
+            };
+        };
+
+        // function check() {
+        //     let number = document.getElementById("num").value;
+        //     let temperature1 = new Temperature(number);
+        // }
+
+        function fool1() {
+            let number = document.getElementById("num").value;
+            let temperature1 = new Temperature(number);
+            document.getElementById("fool2").innerHTML = temperature1.getFool();
+        };
+
+        function kenvin1() {
+            let number = document.getElementById("number").value;
+            let temperature1 = new Temperature(number);
+            document.getElementById("kenvin2").innerHTML = temperature1.getKenvin();
+        }
+    </script>
+</body>
+
+</html>

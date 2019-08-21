@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = prompt("nhập số");
+        let Circle = function(radius) {
+            this.radius = radius;
+            this.color = "green";
+
+            this.getRadius = function() {
+                return radius;
+            };
+            this.getArea = function() {
+                return Math.PI * radius * radius;
+            };
+        };
+        let circle = new Circle(n);
+        let area = circle.getArea();
+        let radius1 = circle.getRadius();
+
+        alert("bán kính " + radius1 + " diện tích " + area);
+    </script>
+</body>
+
+</html>

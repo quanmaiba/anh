@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let MyDate = new function() {
+            this.day = "13";
+            this.month = "10";
+            this.year = "2019";
+            this.getDay = function() {
+                return this.day;
+            }
+            this.getMonth = function() {
+                return this.month;
+            }
+            this.getYear = function() {
+                return this.year;
+            }
+        };
+        MyDate.month = "12"
+        alert(MyDate.getMonth());
+    </script>
+</body>
+
+</html>

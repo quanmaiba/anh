@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class SwButton {
+            constructor() {
+                this.status = status;
+                this.lamp = null;
+            };
+            connetToLamp(lamp) {
+                this.lamp = lamp;
+            };
+            swOff() {
+                if (this.lamp != null) {
+                    this.lamp.turnOff();
+                    this.status = false;
+                } else {
+                    alert('ket noi')
+                };
+            };
+            swOn() {
+                if (this.lamp != null) {
+                    this.lamp.turnOn();
+                    this.status = false;
+                } else {
+                    alert('chua ket noi')
+                }
+            };
+        };
+        class ElecLamp {
+            constructor() {
+                this.status = false;
+            };
+            turnOff() {
+                this.status = false;
+            };
+            turnOn() {
+                turnOn.status = true;
+            };
+        };
+
+        let lamp = new ElecLamp();
+        let swbutton = new SwButton();
+
+        swbutton.connetToLamp(lamp);
+        swbutton.swOn();
+    </script>
+
+</body>
+
+</html>

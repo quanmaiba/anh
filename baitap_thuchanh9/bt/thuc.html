@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="check()">Cick</button>
+    <script>
+        class Battery {
+            constructor(energy) {
+                this.energy = energy;
+            };
+            setEnergy(energy) {
+                this.energy = energy;
+            };
+            getEnergy() {
+                return this.energy;
+            };
+            decreaseEnergy() {
+                if (this.energy > 0) {
+                    this.energy--;
+                }
+            };
+        };
+        class FlashLamp {
+            constructor(status) {
+                this.status = status
+            };
+            setBatery(num) {
+                this.battery = num;
+            };
+            getBatery() {
+                return this.battery.getEnergy();
+            };
+            light() {
+                this.status ? alert("on") : alert("off")
+            };
+            turnOn() {
+                this.status = true;
+            };
+            turnOff() {
+                this.status = false;
+            };
+        };
+
+        let battery = new Battery();
+        // let flashlamp = FlashLamp(true)
+        battery.setEnergy(10);
+
+        console.log(battery.setEnergy());
+    </script>
+</body>
+
+</html>

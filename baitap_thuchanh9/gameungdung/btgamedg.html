@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <canvas id="myCanvas" width="800" height="500" style="border:1px solid #db1f1f;"> -->
+    <p id="game"></p>
+    <script>
+        class Hero {
+            constructor(image, top, left, size, speed) {
+                this.image = image;
+                this.top = top;
+                this.left = left;
+                this.size = size;
+                this.speed = speed;
+            };
+            getHeroElement() {
+                return '<img width="' + this.size + '"' +
+                    ' height="' + this.size + '"' +
+                    ' src=" ' + this.image + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+            };
+
+            moveRight() {
+                this.left += 20;
+                console.log('ok: ' + this.left);
+            };
+            moveLeft() {
+                this.image = 'anhgai.jpg'
+                this.left -= 20;
+                console.log('ok: ' + this.left);
+            };
+
+            moveDown() {
+                this.image = 'anh.jpg'
+                this.top += 20;
+                console.log('ok: ' + this.top);
+            };
+            moveup() {
+                this.top -= 20;
+                console.log('ok: ' + this.top);
+            };
+            speed() {
+                return this.speed - 2;
+            };
+
+        };
+
+        // var hero = new Hero('anhgai.jpg', 0, 0, 200, );
+        var hero = new Hero('anhgai.jpg', 0, 0, 200, 50);
+        const limitWidth = window.innerWidth - hero.size;
+        const limitHeight = window.innerHeight - hero.size;
+
+        function start() {
+            if (hero.left < limitWidth && hero.top <= 0) {
+                hero.moveRight();
+            }
+            if (hero.left >= limitWidth && hero.top < limitHeight) {
+                hero.moveDown()
+            }
+            if (hero.left > 0 && hero.top >= limitHeight) {
+                hero.moveLeft()
+            }
+            if (hero.left <= 0 && hero.top > 0) {
+                hero.moveup()
+            }
+            document.getElementById('game').innerHTML = hero.getHeroElement();
+            setInterval(start, speed1);
+            let speed1 = hero.speed();
+            console.log(speed1);
+        }
+        start();
+        //     if (hero.left < window.innerWidth - hero.size) {
+        //         hero.moveRight();
+        //     } else if (hero.left >= window.innerWidth - hero.size) {
+        //         if (hero.top < window.innerHeight - hero.size)
+        //             hero.moveDown();
+        //     }
+        //     if (hero.top >= window.innerHeight - hero.size) {
+        //         if (hero.left >= window.innerWidth - hero.size)
+        //             hero.moveLeft();
+
+        //     }
+        //     document.getElementById('game').innerHTML = hero.getHeroElement();
+        //     setTimeout(start, 30);
+        // };
+        // start();
+
+        // window.onload = function() {
+        //     var ctx = document.getElementById("myCanvas").getContext("2d");
+        //     var img = document.getElementById("anh1");
+        //     ctx.begin
+        //     ctx.drawImage (img, 10, 10);
+        // }
+    </script>
+</body>
+
+</html>

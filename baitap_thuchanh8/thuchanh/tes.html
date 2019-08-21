@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let apple = new function() {
+            this.type = "macintosh",
+                this.color = "red",
+                this.getInfo = function() {
+                    return this.color + ' ' + this.type + ' apple';
+                }
+        }
+        apple.color = "reddish";
+        alert(apple.getInfo());
+        // function Person(first, last, age, eye) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = eye;
+        //     this.nationality = "English";
+        //     Person.prototype.getInfo = function() {
+        //         return this.fistName + ' ' + this.lastName + ' ';
+        //     }
+        // }
+
+
+
+
+        // // var myFather = new Person("John", "Doe", 50, "blue");
+        // // var myMother = new Person("Sally", "Rally", 48, "green");
+
+        // document.getElementById("demo").innerHTML =
+        //     "The nationality of my father is " + Person();
+    </script>
+</body>
+
+</html>

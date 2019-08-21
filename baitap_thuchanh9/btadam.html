@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Adam</p>
+    <button onclick="eatApple('adam')">Eat</button>
+    <p id="adamWeight"></p>
+    <hr />
+    <p>Eva</p>
+    <button onclick="eatApple('eva')">Eat</button>
+    <p id="EvaWeight"></p>
+
+    <script>
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            };
+            decrease() {
+                this.weight--;
+            };
+            isEmpty() {
+                return (this.weight === 0) ? true : false;
+            };
+            getWeight() {
+                return this.weight;
+            };
+        };
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMade() {
+                return this.weight
+            };
+            setGender(newGender) {
+                this.gender = newGender;
+            };
+            checkApple(apple) {
+                return apple.isEmpty();
+            };
+            eat(apple) {
+                apple.decrease();
+                this.weight += 5;
+            };
+            say(str) {
+                alert(this.name + " Say: " + str);
+            };
+            getName(str) {
+                this.name = str;
+            };
+            getWeight() {
+                return this.weight;
+            };
+            setWeight(newWeight) {
+                this.weight = newWeight;
+            };
+        };
+        let apple = new Apple(10);
+        let adam = new Human("Adam", true, 60);
+        let eva = new Human("Eva", false, 50);
+
+        function eatApple(name) {
+            if (name === "adam") {
+                console.log("Adam an mot mieng");
+                if (adam.checkApple(apple)) {
+                    adam.say("Adam an het tao ui");
+                    console.log("Can nang Adam: " + adam.getWeight());
+
+                } else {
+                    adam.eat(apple);
+                    console.log("Con:" + apple.getWeight());
+                    console.log("an tiep nao");
+                    console.log(adam.getWeight());
+                };
+            };
+            if (name === "eva") {
+                console.log("Eva an mot mieng");
+                if (eva.checkApple(apple)) {
+                    eva.say("Eva an het tao ui");
+                    console.log(eva.getWeight());
+                } else {
+                    eva.eat(apple);
+                    console.log("Con:" + apple.getWeight());
+                    console.log("an tiep nao");
+                    console.log("Can nang Eva: " + eva.getWeight());
+                };
+            };
+        };
+    </script>
+</body>
+
+</html>

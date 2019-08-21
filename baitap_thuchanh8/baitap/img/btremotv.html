@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Tivi {
+            constructor(chanel, volum, status) {
+                this.chanel = remote.chanel = chanel;
+                this.volum = volum;
+                this.status = status;
+            };
+            setChanel(remote) {
+                this.chanel = remote.getChannel();
+            };
+            setVolum(remote) {
+                this.volum = remote.getVolum();
+            };
+            getOnOff() {
+                return (this.status != this.status)
+            };
+        };
+        class Remote {
+            constructor(tivi) {
+                this.chanel;
+            };
+            getChannel(tivi) {
+                if (tivi.status) {
+                    return (this.chanel = tivi.chanel = +prompt("nhap kenh"))
+                } else return "tivi chua bat"
+            };
+            getVolum(tivi) {
+                if (tivi.status) {
+                    return tivi.volum + 2;
+                } else return "tivi chua bat"
+            };
+            swOnOff(tivi) {
+                return (tivi.status != tivi.status);
+            };
+        };
+
+        let remote = new Remote();
+
+        let tivi = new Tivi(3, 15, false)
+            // console.log("tivi status: " + tivi.status);
+            // console.log("tivi volume: " + tivi.volum);
+            // remote.swOnOff(tivi);
+            // console.log("tivi status: " + tivi.status);​
+            // // remote.getChannel(tivi);
+            // // console.log("tivi chanel: " + tivi.chanel);​
+            // // remote.getVolum(tivi);
+            // // console.log("tivi volume: " + tivi.volum);
+    </script>
+</body>
+
+</html>

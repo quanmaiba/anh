@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div style="width:600px;height:480px;float:left">
+        <canvas id="canvas" width=1200 height=650 style="border:1px solid #db1f1f;">  
+     </canvas>
+        <button onclick="docEvents()">kick</button>
+    </div>
+    <script>
+        class Game {
+            constructor(image, top, left, size) {
+                this.image = image;
+                this.top = top;
+                this.left = left;
+                this.size = size;
+                this.speed = 40
+            };
+            getImage(str) {
+                image.src = str;
+            };
+            moveleft() {
+                this.image = 'top1.png';
+                this.top -= 20;
+                console.log('ok: ' + this.top);
+            };
+            moveright() {
+                this.image = 'top1.png';
+                this.top += 20;
+                console.log('ok: ' + this.top);
+            };
+            movedown() {
+                this.image = 'top1.png';
+                this.left += 50;
+                console.log('ok: ' + this.left);
+            };
+            movetop() {
+                this.image = 'top1.png';
+                this.left -= 50;
+                console.log('ok: ' + this.left);
+            };
+            getspeed(top) {
+                this.top += this.speed
+            };
+        };
+        let game = new Game("top1.png", 200, 100, 20);
+
+        function statr() {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+            var image = new Image();
+            image.src = game.image;
+            image.onload = function() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(image, game.top, game.left);
+            };
+        };
+
+        function docEvents() {
+            window.addEventListener('keydown', movegame);
+        }
+
+        function movegame(evt) {
+            switch (evt.keyCode) {
+                case 39:
+                    game.moveright()
+                    statr();
+                    break;
+                case 37:
+                    game.moveleft();
+                    statr();
+                    break;
+                case 40:
+                    game.movedown();
+                    statr();
+                    break;
+                case 38:
+                    game.movetop();
+                    statr();
+                    break;
+                case 17:
+                    getspeed(top);
+                    statr();
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
