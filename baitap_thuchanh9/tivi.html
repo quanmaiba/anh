@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Remote {
+            constructor(tivi) {
+                this.seris = 1;
+                this.chanel;
+            }
+            changeChanelR(tivi) {
+                if (tivi.status) {
+                    return (this.chanel = tivi.chanel = +prompt("Change to Chanel?"));
+                } else return "Tivi Off.";
+            }
+            changeVolumeR(tivi) {
+                if (tivi.status) {
+                    return tivi.volume++;
+                    // return (tivi.volume = +prompt("Change Volume? "));
+                } else return "Tivi Off.";
+            }
+            switchOnOff(tivi) {
+                return (tivi.status = !tivi.status);
+            }
+        }
+        class Tivi {
+            constructor(chanel, volume, status) {
+                this.chanel = remote.chanel = chanel;
+                this.volume = volume;
+                this.status = status;
+            }
+            changeChanelT(remote) {
+                this.chanel = remote.changeChanelR();
+            }
+            changeVolumeT(remote) {
+                this.volume = remote.changeVolumeR();
+            }
+            OnOff() {
+                return (this.status = !this.status);
+            }
+        }
+        let remote = new Remote();
+        let tivi = new Tivi(2, 10, false)
+        console.log("tivi status: " + tivi.status)
+        console.log("tivi volume: " + tivi.volume)
+        remote.switchOnOff(tivi);
+        console.log("tivi status: " + tivi.status);
+        remote.changeChanelR(tivi);
+        console.log("tivi chanel: " + tivi.chanel);
+        console.log("tivi volume: " + tivi.volume)
+    </script>
+</body>
+
+</html>

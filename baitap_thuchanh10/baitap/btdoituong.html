@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printYearsLived() {
+            let birthday = new Date(1995, 11, 01);
+            let current = new Date(2019, 08, 20);
+            let yearsLived = current.getYear() - birthday.getYear();
+            console.log("I've lived for " + yearsLived + " years");
+            console.log("I've lived for " + yearsLived * 12 + " months");
+            console.log("I've lived for " + yearsLived * 12 * 30 + " days");
+            console.log("I've lived for " + yearsLived * 12 * 30 * 24 + " hours");
+            console.log(
+                "I've lived for " + yearsLived * 12 * 30 * 24 * 60 + " minutes"
+            );
+            console.log(
+                "I've lived for " + yearsLived * 12 * 30 * 24 * 60 * 60 + " seconds"
+            );
+        }
+        printYearsLived();
+
+        function printRandomNum() {
+            console.log(Math.round(Math.random() * 10));
+            console.log(Math.round(Math.random() * 400));
+            console.log(Math.round(Math.random() * 50 + 50));
+        }
+        printRandomNum();
+
+        function countChar(text, char) {
+            let str = [];
+            let count = 0;
+            str = text.split("");
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === char) count++;
+            }
+            console.log("so lan co ki tu " + char + " : " + count);
+            console.log(str);
+            str = text.split(" ");
+            count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i].length >= 2) count++;
+            }
+            console.log("so tu co trong cau :" + count);
+        }
+        let text = "Tôi yêu ngôn ngữ lập trình Javascript";
+        countChar(text, "a");
+        text = text.replace("Javascript", "Typescript");
+        console.log(text);
+    </script>
+</body>
+
+</html>

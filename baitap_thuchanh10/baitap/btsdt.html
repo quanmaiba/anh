@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tel = "(84)-(0978489648)";
+        let regexp = /^\([0-9]{2}\)\-\([0-9]{10}\)$/;
+
+        function checkTel(tel) {
+            if (regexp.test(tel)) return console.log("Hợp lệ.");
+            else console.log("Không hợp lệ.");
+        }
+        checkTel(tel);
+    </script>
+</body>
+
+</html>
